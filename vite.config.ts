@@ -44,12 +44,5 @@ export default defineConfig({
       exclude: ['**/components/*.vue'],
       defaultLayout: 'default'
     })
-  ],
-  build: {
-    rollupOptions: {
-      input: {
-        contentScript: PATHS.HTML.contentScript
-      },
-    },
-  }
+  ]
 })
