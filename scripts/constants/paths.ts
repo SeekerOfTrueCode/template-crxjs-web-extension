@@ -4,7 +4,6 @@ export const PATHS = {
         contentScript: "src/content-script.ts"
     },
     HTML: {
-        contentScript: "content-script.html",
         popup: "popup.html"
     }
 }
