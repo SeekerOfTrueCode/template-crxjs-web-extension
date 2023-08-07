@@ -5,7 +5,6 @@ import manifest from './scripts/manifest.config' // Node 14 & 16
 import layouts from 'vite-plugin-vue-layouts'
 import pages from 'vite-plugin-pages'
 
-import { PATHS } from './scripts/constants/paths'
 import { resolvePath } from './scripts/resolve-path'
 
 export default defineConfig({
@@ -13,8 +12,8 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     hmr: {
-      port: 5173,
-    },
+      port: 5173
+    }
   },
   resolve: {
     alias: [
@@ -25,7 +24,7 @@ export default defineConfig({
       {
         find: '@@',
         replacement: resolvePath('.')
-      },
+      }
     ]
   },
   plugins: [
@@ -33,13 +32,13 @@ export default defineConfig({
     crx({ manifest }),
     pages({
       dirs: [
-        { dir: 'src/app/popup/pages', baseRoute: 'popup' },
+        { dir: 'src/app/popup/pages', baseRoute: 'popup' }
       ],
       exclude: ['**/components/*.vue']
     }),
     layouts({
       layoutsDirs: [
-        'src/app/popup/layouts',
+        'src/app/popup/layouts'
       ],
       exclude: ['**/components/*.vue'],
       defaultLayout: 'default'

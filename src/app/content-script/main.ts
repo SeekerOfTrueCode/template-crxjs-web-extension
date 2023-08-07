@@ -3,6 +3,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 export function mountApp(rootContainer: string | Element) {
-    createApp(App)
+  createApp(App)
     .mount(rootContainer)
 }
