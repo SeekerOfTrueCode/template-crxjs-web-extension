@@ -24,13 +24,7 @@ export default defineManifest(async (env) => ({
     action: {
         default_popup: PATHS.HTML.popup
     },
-    web_accessible_resources: [{
-        resources: [
-            PATHS.HTML.contentScript,
-            // paths.html.popup
-        ],
-        matches: ["https://*.google.com/*"]
-    }],
+    web_accessible_resources: [],
     content_scripts: [{
         matches: ["https://*/*"],
         js: [PATHS.TS.contentScript]

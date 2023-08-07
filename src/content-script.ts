@@ -1,10 +1,19 @@
-import { PATHS } from '@@/scripts/constants/paths'
+import { mountApp } from '@/app/content-script/main'
+import { createElement } from '@/logic/utils/html/create-element';
+import mainStyleSheet from '@/app/content-script/style.css?inline'
 
-const src = chrome.runtime.getURL(PATHS.HTML.contentScript)
-console.log(src)
-// const iframeStyle = 'position: fixed; right: 0px; top: 0px; z-index: 99999; width: 100%; height: 100%; border: none; color-scheme: none; pointer-events: none;'
-// const iframe = new DOMParser()
-//     .parseFromString(`<iframe style="${iframeStyle}" class="crx" src="${src}"></iframe>`, 'text/html')
-//     .body.firstElementChild as Node
+const shadowWrapper = createElement('div', { 
+    id: '#app', 
+    style: 'position: fixed; right: 0px; top: 0px; z-index: 99999; width: 100%; height: 100%; border: none; color-scheme: none; pointer-events: none;'
+});
 
-// document.body.append(iframe)
+const [contentRoot] = createElement('div', { 
+    id: 'root-app', 
+    attachShadow: true, 
+    attachShadowAddStyleSheets: [mainStyleSheet],
+    attachShadowChildren: [shadowWrapper]
+})
+
+document.body.append(contentRoot);
+mountApp(shadowWrapper);
+
