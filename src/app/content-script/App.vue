@@ -7,11 +7,10 @@
       top: 0px;
       right: 0px;
       color: red;
-      pointer-events: all;
     "
   >
     <div style="width: 200px">Hey</div>
-    <button>Click me</button>
+    <button style="pointer-events: all;">Click me</button>
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>

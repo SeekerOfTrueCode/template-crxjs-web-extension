@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
-import './style.css'
+// import './style.css' // we have to apply it inside the content-script's shadow element instead
 import App from './App.vue'
 
-createApp(App)
-    .mount('#app')
+export function mountApp(rootContainer: string | Element) {
+    createApp(App)
+    .mount(rootContainer)
+}
