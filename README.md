@@ -10,9 +10,6 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 - rename vue files to be kebab-case (not Pascal)
 
 - Add vitest
-- Add auto-import
-- Add pinia
-- Add vue-use
 
 - (?) Add storybook
 
