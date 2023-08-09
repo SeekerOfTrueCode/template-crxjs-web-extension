@@ -8,8 +8,10 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 - change "welcome" page (App.vue) for content script to match the one in popup
 - rename vue files to be kebab-case (not Pascal)
+- Add loading app var / handling
 
 - Add vitest
+- Add i18n
 
 - (?) Add storybook
 
