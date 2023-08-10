@@ -10,7 +10,7 @@ export function installPersistedStatePluginExtended(context: PiniaPluginContext,
 
     for (const [key, { newValue }] of Object.entries(changes)) {
       if (storeId !== key) return
-      const newVal: TransportObject = newValue
+      const newVal = newValue as TransportObject
 
       if (newVal == null) return
       if (newVal.from === baseRoute) return

@@ -11,7 +11,10 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
-    "lint fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.vue"
+    "lint fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.vue",
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
@@ -24,19 +27,22 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.18",
     "@types/chrome": "0.0.242",
-    "@types/node": "^20.4.6",
     "@types/json-stringify-safe": "^5.0.0",
+    "@types/node": "^20.4.6",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/test-utils": "^2.4.1",
     "eslint": "^8.46.0",
     "eslint-plugin-vue": "^9.16.1",
+    "happy-dom": "^10.9.0",
     "typescript": "^5.1.6",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.5",
     "vite-plugin-pages": "^0.31.0",
     "vite-plugin-vue-layouts": "^0.8.0",
+    "vitest": "^0.34.1",
     "vue-eslint-parser": "^9.3.1",
     "vue-tsc": "^1.8.5"
   }

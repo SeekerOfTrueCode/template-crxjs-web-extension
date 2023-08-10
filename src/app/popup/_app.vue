@@ -2,7 +2,6 @@
 
 <template>
   <!-- v-slot="{ Component }" -->
-  <span>App:</span>
   <RouterView></RouterView>
 </template>
 

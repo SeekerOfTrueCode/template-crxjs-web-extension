@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useCountStore } from '@/store/count'
 
-defineProps<{ msg: string }>()
+defineProps<{ [key: string]: unknown }>()
 
 const countStore = useCountStore()
 await countStore.$persistedState.isReady()
@@ -12,12 +12,10 @@ await countStore.$persistedState.isReady()
 
   <div class="card">
     <button type="button" @click="() => countStore.count++">
-      count is {{ countStore.count }}
+      Count is {{ countStore.count }}
     </button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <p>Edit <code>components/count-example.vue</code> to test HMR</p>
+    <p></p>
   </div>
 </template>
 

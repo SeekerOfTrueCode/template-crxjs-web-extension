@@ -1,9 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <span>Page:</span>
   <Suspense>
-    <HelloWorld msg="Vite + Vue" />
+    <CountExample />
   </Suspense>
   <RouterLink :to="'/about'">Go to about</RouterLink>
   <RouterLink :to="'/about/complex'">Go to popup</RouterLink>
