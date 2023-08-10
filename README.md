@@ -6,15 +6,13 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- Add loading app var / handling
-
 - Add i18n
 - (?) Add storybook
-  
-- Prepare vitest and vite shared config
-- Prepare background script to include "html" file which can use html related libraries like sound playing API
-- (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
 
+- Prepare background script to include "html" file which can use html related libraries like sound playing API
+- Add loading app var / handling
+- (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
+  
 ## Complex template (code-structure wise / architecture wise)
 
 - Layered structure

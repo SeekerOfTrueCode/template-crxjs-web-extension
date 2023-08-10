@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
-import App from './_app.vue'
+import App from './app.vue'
 import { setupRouter } from '@/logic/setup-router'
 import { setupStore } from '@/logic/setup-store'
 
