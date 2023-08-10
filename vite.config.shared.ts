@@ -1,6 +1,7 @@
 import type { UserConfig } from 'vite'
 import { resolvePath } from './scripts/resolve-path'
 import vue from '@vitejs/plugin-vue'
+import vueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import layouts from 'vite-plugin-vue-layouts'
@@ -23,6 +24,9 @@ export const sharedConfig: UserConfig = {
 
 export const plugins: UserConfig['plugins'] = [
   vue(),
+  vueI18nPlugin({
+    include: resolvePath('src/locales/**')
+  }),
   autoImport({
     include: [
       /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
@@ -33,7 +37,11 @@ export const plugins: UserConfig['plugins'] = [
       // presets
       'vue',
       'vue-router',
-      // custom
+      {
+        'vue-i18n': [
+          'useI18n'
+        ]
+      },
       {
         '@vueuse/core': [
           // named imports
@@ -59,7 +67,7 @@ export const plugins: UserConfig['plugins'] = [
     dts: './auto-imports.d.ts',
     vueTemplate: false,
     eslintrc: {
-      enabled: false, // Default `false`
+      enabled: true, // Default `false`
       filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
       globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
     }
