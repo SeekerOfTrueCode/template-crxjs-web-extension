@@ -6,7 +6,6 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- Add i18n
 - (?) Add storybook
 
 - Prepare background script to include "html" file which can use html related libraries like sound playing API

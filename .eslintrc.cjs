@@ -6,8 +6,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-essential'
-    // './.eslintrc-auto-import.json'
+    'plugin:vue/vue3-essential',
+    './.eslintrc-auto-import.json'
   ],
   globals: {
     chrome: true

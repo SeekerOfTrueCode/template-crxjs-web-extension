@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n({})
+</script>
 
 <template>
   <Suspense>
     <CountExample />
   </Suspense>
-  <RouterLink :to="'/about'">Go to about</RouterLink>
-  <RouterLink :to="'/about/complex'">Go to popup</RouterLink>
+  <RouterLink :to="'/about'">{{ t("route.about") }}</RouterLink>
+  <RouterLink :to="'/about/complex'">{{ t("route.aboutComplex") }}</RouterLink>
 </template>
 
 <route lang="yaml">
