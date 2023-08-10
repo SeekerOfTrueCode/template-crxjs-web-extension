@@ -6,10 +6,8 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- (?) Add storybook
-
 - Prepare background script to include "html" file which can use html related libraries like sound playing API
-- Add loading app var / handling
+- (?) Add storybook
 - (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
   
 ## Complex template (code-structure wise / architecture wise)
@@ -18,5 +16,4 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 - Dependency injection (perhaps)
 
 Legend:
-(!) - must have
 (?) - good to have but not must to have

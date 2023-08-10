@@ -4,7 +4,7 @@ const vueSvg = chrome.runtime.getURL('src/assets/vue.svg')
 </script>
 
 <template>
-  <div style="position: absolute; top: 0px; right: 0px; padding: 12px">
+  <div v-if="!$appLoading.value" style="position: absolute; top: 0px; right: 0px; padding: 12px">
     <div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
