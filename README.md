@@ -6,21 +6,13 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- change "welcome" page (App.vue) for content script to match the one in popup
-- rename vue files to be kebab-case (not Pascal)
-
-- Add vitest
-- Add auto-import
-- Add pinia
-- Add vue-use
-
+- Add i18n
 - (?) Add storybook
 
-- (!) prepare logic for synch communication between background, content-script, popup and options
-
 - Prepare background script to include "html" file which can use html related libraries like sound playing API
+- Add loading app var / handling
 - (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
-
+  
 ## Complex template (code-structure wise / architecture wise)
 
 - Layered structure

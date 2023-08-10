@@ -10,9 +10,9 @@ const [major, minor, patch, label] = parseVersion(packageJson.version)
 export default defineManifest(async (env) => ({
   manifest_version: 3,
   name:
-        env.mode === 'staging'
-          ? `[INTERNAL] ${normalizedName}`
-          : normalizedName,
+    env.mode === 'staging'
+      ? `[INTERNAL] ${normalizedName}`
+      : normalizedName,
   // up to four numbers separated by dots
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"
@@ -30,6 +30,13 @@ export default defineManifest(async (env) => ({
     js: [PATHS.TS.contentScript]
   }],
   permissions: [
-    'activeTab'
+    'tabs',
+    'storage',
+    'activeTab',
+    'notifications'
+    // `management`,
+    // 'http://*/',
+    // 'https://*/'
   ]
+  // content_security_policy: `script-src 'self' http://localhost:${port}; object-src 'self'; script-src-elem 'self' http://localhost:${port} https://www.youtube.com;`
 }))

@@ -1,0 +1,1 @@
+export const USED_STORAGE = 'local' as const

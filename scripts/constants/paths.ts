@@ -6,5 +6,5 @@ export const PATHS = {
   HTML: {
     popup: 'popup.html'
   }
-}
+} as const
 // (import.meta.env.MODE === 'staging' ? '' : 'public/')

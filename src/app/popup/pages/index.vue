@@ -1,10 +1,9 @@
-<script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <span>Page:</span>
-  <HelloWorld msg="Vite + Vue" />
+  <Suspense>
+    <CountExample />
+  </Suspense>
   <RouterLink :to="'/about'">Go to about</RouterLink>
   <RouterLink :to="'/about/complex'">Go to popup</RouterLink>
 </template>

@@ -25,7 +25,8 @@
       "@types/chrome",
       "vite/client",
       "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client"
+      "vite-plugin-vue-layouts/client",
+      "vitest/globals"
     ],
     "paths": {
       "@/*": [
@@ -43,7 +44,9 @@
     "src/**/*.vue",
     "src/content-script.ts",
     "src/background.ts",
-    "src/vite-env.d.ts"
+    "src/vite-env.d.ts",
+    "components.d.ts",
+    "auto-imports.d.ts"
   ],
   "references": [
     {
