@@ -6,7 +6,7 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- Prepare background script to include "html" file which can use html related libraries like sound playing API
+- Fix `offscreen.html` which doesn't render imported script `offscreen.ts`
 - (?) Add storybook
 - (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
   

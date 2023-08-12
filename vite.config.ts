@@ -3,6 +3,7 @@ import manifest from './scripts/manifest.config' // Node 14 & 16
 import { crx } from '@crxjs/vite-plugin'
 
 import { sharedConfig, plugins } from './vite.config.shared'
+import { PATHS } from './scripts/constants/paths'
 
 export default defineConfig({
   ...sharedConfig,
@@ -16,5 +17,12 @@ export default defineConfig({
   plugins: [
     ...plugins,
     crx({ manifest })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      input: {
+        offscreen: PATHS.HTML.OFFSCREEN
+      }
+    }
+  }
 })

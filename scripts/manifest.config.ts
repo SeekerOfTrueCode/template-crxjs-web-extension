@@ -18,22 +18,35 @@ export default defineManifest(async (env) => ({
   // semver is OK in "version_name"
   version_name: packageJson.version,
   background: {
-    service_worker: PATHS.TS.background,
+    service_worker: PATHS.TS.BACKGROUND,
     type: 'module'
   },
   action: {
-    default_popup: PATHS.HTML.popup
+    default_popup: PATHS.HTML.POPUP
   },
-  web_accessible_resources: [],
-  content_scripts: [{
-    matches: ['https://*/*'],
-    js: [PATHS.TS.contentScript]
-  }],
+  web_accessible_resources: [
+    {
+      resources: [PATHS.HTML.OFFSCREEN],
+      matches: ['http://*/*']
+    }
+  ],
+  content_scripts: [
+    {
+      matches: ['https://*/*'],
+      js: [PATHS.TS.CONTENT_SCRIPT]
+    }
+    // {
+    //   matches: ['https://www.google.com/*'],
+    //   js: [PATHS.TS.OFFSCREEN]
+    // }
+  ],
   permissions: [
     'tabs',
     'storage',
     'activeTab',
-    'notifications'
+    'notifications',
+    'offscreen',
+    'alarms'
     // `management`,
     // 'http://*/',
     // 'https://*/'
