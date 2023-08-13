@@ -1,6 +1,7 @@
 import { defineManifest } from '@crxjs/vite-plugin'
 import packageJson from '../package.json'
 import { PATHS } from './constants/paths'
+import { MATCHES } from './constants/matches'
 import { MANIFEST_PERMISSIONS } from './constants/manifest-permissions'
 import { capitalize } from './utils/capitalize'
 import { parseVersion } from './utils/parse-version'
@@ -27,16 +28,16 @@ export default defineManifest(async (env) => {
     web_accessible_resources: [
       {
         resources: [PATHS.HTML.OFFSCREEN],
-        matches: ['http://*/*']
+        matches: [MATCHES.ALL]
       }
     ],
     content_scripts: [
       {
-        matches: ['https://*/*'],
+        matches: [MATCHES.ALL],
         js: [PATHS.TS.CONTENT_SCRIPT]
       }
       // {
-      //   matches: ['https://www.google.com/*'],
+      //   matches: [MATCHES.GOOGLE],
       //   js: [PATHS.TS.OFFSCREEN] // FIXME: HERE I can check variable if staging and use ts.js for dev and just ts for build
       // }
     ],
