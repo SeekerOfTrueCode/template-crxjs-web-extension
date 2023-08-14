@@ -10,6 +10,7 @@
   "include": [
     "scripts/manifest.config.ts",
     "scripts/resolve-path.ts",
+    "scripts/utils/define-extra-html-pages.ts",
     "vite.config.ts",
     "vite.config.shared.ts",
     "package.json"

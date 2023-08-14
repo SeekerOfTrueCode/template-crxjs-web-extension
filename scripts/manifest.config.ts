@@ -27,14 +27,18 @@ export default defineManifest(async (env) => {
     },
     web_accessible_resources: [
       {
+        resources: ['src/assets/*.svg', 'public/*.svg'],
+        matches: [MATCHES.ALL]
+      },
+      {
         resources: [PATHS.HTML.OFFSCREEN],
         matches: [MATCHES.ALL]
       }
     ],
     content_scripts: [
       {
-        matches: [MATCHES.ALL],
-        js: [PATHS.TS.CONTENT_SCRIPT]
+        js: [PATHS.TS.CONTENT_SCRIPT],
+        matches: [MATCHES.ALL_HTTP, MATCHES.ALL_HTTPS]
       }
       // {
       //   matches: [MATCHES.GOOGLE],
@@ -43,15 +47,24 @@ export default defineManifest(async (env) => {
     ],
     permissions: [
       MANIFEST_PERMISSIONS.TABS,
-      MANIFEST_PERMISSIONS.STORAGE,
       MANIFEST_PERMISSIONS.ACTIVE_TAB,
+      MANIFEST_PERMISSIONS.STORAGE,
       MANIFEST_PERMISSIONS.NOTIFICATIONS,
       MANIFEST_PERMISSIONS.OFFSCREEN,
       MANIFEST_PERMISSIONS.ALARMS
       // MANIFEST_PERMISSIONS.MANAGEMENT
-      // 'http://*/',
-      // 'https://*/'
+    ],
+    host_permissions: [ // for domains to make ajax / fetch but also grants permission for "tabs" for specific sites without tabs permission
+      // MATCHES.ALL_HTTP,
+      // MATCHES.ALL_HTTPS
     ]
-    // content_security_policy: `script-src 'self' http://localhost:${port}; object-src 'self'; script-src-elem 'self' http://localhost:${port} https://www.youtube.com;`
+    // content_security_policy: {
+    //   sandbox: 'sandbox allow-scripts; script-src \'self\' https://www.youtube.com'
+    // },
+    // sandbox: {
+    //   pages: [
+    //     PATHS.HTML.OFFSCREEN
+    //   ]
+    // }
   }
 })

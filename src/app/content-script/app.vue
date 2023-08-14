@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const viteSvg = chrome.runtime.getURL('vite.svg')
-const vueSvg = chrome.runtime.getURL('/assets/vue.svg')
+const viteSvg = chrome.runtime.getURL('public/vite.svg')
+const vueSvg = chrome.runtime.getURL('src/assets/vue.svg')
 </script>
 
 <template>

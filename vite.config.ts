@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import manifest from './scripts/manifest.config' // Node 14 & 16
 import { crx } from '@crxjs/vite-plugin'
-
 import { sharedConfig, plugins } from './vite.config.shared'
 import { PATHS } from './scripts/constants/paths'
+import { defineExtraHtmlPages } from './scripts/utils/define-extra-html-pages'
 
 export default defineConfig({
   ...sharedConfig,
@@ -21,7 +21,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        offscreen: PATHS.HTML.OFFSCREEN
+        ...defineExtraHtmlPages([
+          ['offscreen', PATHS.HTML.OFFSCREEN]
+        ])
       }
     }
   }
