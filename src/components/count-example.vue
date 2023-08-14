@@ -8,8 +8,6 @@ await countStore.$persistedState.isReady()
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
   <div class="card">
     <button type="button" @click="() => countStore.count++">
       Count is {{ countStore.count }}

@@ -1,10 +1,12 @@
 export const PATHS = {
   TS: {
-    background: 'src/background.ts',
-    contentScript: 'src/content-script.ts'
+    BACKGROUND: 'src/background.ts',
+    CONTENT_SCRIPT: 'src/content-script.ts'
+    // OFFSCREEN: 'src/offscreen.ts'
   },
   HTML: {
-    popup: 'popup.html'
+    POPUP: 'popup.html',
+    OFFSCREEN: 'offscreen.html'
   }
 } as const
 // (import.meta.env.MODE === 'staging' ? '' : 'public/')
