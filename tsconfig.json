@@ -43,8 +43,6 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/content-script.ts",
-    "src/background.ts",
     "src/vite-env.d.ts",
     "components.d.ts",
     "auto-imports.d.ts"

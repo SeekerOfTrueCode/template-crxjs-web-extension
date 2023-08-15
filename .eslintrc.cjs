@@ -22,13 +22,13 @@ module.exports = {
     parserOptions: {
       sourceType: 'script'
     }
-  },
-  {
-    files: ['src/**/pages/**/*.vue'], // Change this to default.vue path
-    rules: {
-      'vue/multi-word-component-names': 'off'
-    }
   }
+    // {
+    //   files: ['src/**/pages/**/*.vue'], // Change this to default.vue path
+    //   rules: {
+    //     'vue/multi-word-component-names': 'off'
+    //   }
+    // }
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -47,6 +47,7 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
-    semi: ['error', 'never']
+    semi: ['error', 'never'],
+    'vue/multi-word-component-names': 'off'
   }
 }

@@ -1,7 +1,7 @@
 import { setupOffscreenDocument } from '@/logic/utils/service-worker/setup-offscreen-document'
 import { PATHS } from '@@/scripts/constants/paths'
 import { createRenderlessAppAndStore } from '@/app/background/main'
-import { useCountStore } from './store/count'
+import { useCountStore } from '@/store/count'
 
 declare const self: ServiceWorkerGlobalScope
 const serviceWorker = self

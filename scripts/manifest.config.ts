@@ -28,11 +28,11 @@ export default defineManifest(async (env) => {
     web_accessible_resources: [
       {
         resources: ['src/assets/*.svg', 'public/*.svg'],
-        matches: [MATCHES.ALL]
+        matches: [MATCHES._]
       },
       {
         resources: [PATHS.HTML.OFFSCREEN],
-        matches: [MATCHES.ALL]
+        matches: [MATCHES._]
       }
     ],
     content_scripts: [

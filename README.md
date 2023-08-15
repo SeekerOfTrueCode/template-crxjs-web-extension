@@ -6,9 +6,8 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## Simple template
 
-- Fix `offscreen.html` which doesn't render imported script `offscreen.ts`
+- Fix `offscreen.html` which doesn't render imported script `offscreen.ts` in dev
 - (?) Add storybook
-- (?) Figure out how to put "popup.html" inside public/pages without breaking building process.
   
 ## Complex template (code-structure wise / architecture wise)
 
