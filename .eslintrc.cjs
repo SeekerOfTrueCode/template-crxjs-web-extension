@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-essential',
+    'plugin:storybook/recommended',
     './.eslintrc-auto-import.json'
   ],
   globals: {
