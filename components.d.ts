@@ -7,8 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CountExample: typeof import('./src/components/count-example.vue')['default']
-    HelloDiv: typeof import('./src/components/hello-div/index.vue')['default']
+    CountExample: typeof import('./src/components/app/count-example/index.vue')['default']
+    HelloDiv: typeof import('./src/components/core/hello-div/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

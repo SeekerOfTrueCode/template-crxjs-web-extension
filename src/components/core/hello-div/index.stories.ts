@@ -8,7 +8,7 @@ const meta = {
              * See https://storybook.js.org/docs/vue/configure/overview#configure-story-loading
              * to learn how to generate automatic titles
              */
-  title: 'components/hello-div',
+  title: 'core-components/hello-div',
   component: HelloDiv,
   render: (args: unknown) => ({
     components: { HelloDiv },
