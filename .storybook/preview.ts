@@ -1,14 +1,14 @@
 import type { Preview } from "@storybook/vue3";
 import { setup } from '@storybook/vue3';
-import { setupStore } from '../src/logic/setup-store'
-import { setupI18n } from '../src/logic/setup-i18n'
+import { setupStore } from '../src/plugins/setup-store'
+import { setupI18n } from '../src/plugins/setup-i18n'
 import stringify from 'json-stringify-safe'
 
 setup((app) => {
   setupStore(app, 'popup', {
     async get(key) {
       return {
-        [key]: JSON.parse(localStorage.getItem(key as any) ?? 'null')
+        [key as string]: JSON.parse(localStorage.getItem(key as any) ?? 'null')
       }
     },
     async set(items: { [key: string]: any }) {
@@ -19,13 +19,13 @@ setup((app) => {
       })
     },
     async remove(keys) {
-      localStorage.removeItem(keys)
+      localStorage.removeItem(keys as string)
     },
     async clear() {
       localStorage.clear()
     },
     onChanged: {
-      addListener(changes) {
+      addListener(changes: any) {
         changes({})
         console.log('onChanged mocked addListener')
       }

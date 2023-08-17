@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 // import './style.css' // we have to apply it inside the content-script's shadow element instead
 import App from './app.vue'
-import { setupStore } from '@/logic/setup-store'
-import { setupI18n } from '@/logic/setup-i18n'
-import { setupLoading } from '@/logic/setup-loading'
-import { delay } from '@/logic/utils/delay'
+import { setupStore } from '@/plugins/setup-store'
+import { setupI18n } from '@/plugins/setup-i18n'
+import { setupLoading } from '@/plugins/setup-loading'
+import { delay } from '@/utils/delay'
 
 export function mountApp(rootContainer: string | Element) {
   const app = createApp(App)

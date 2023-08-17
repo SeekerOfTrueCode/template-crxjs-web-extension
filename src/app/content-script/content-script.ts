@@ -1,5 +1,5 @@
 import { mountApp } from '@/app/content-script/main'
-import { createElement } from '@/logic/utils/html/create-element'
+import { createElement } from '@/utils/html/create-element'
 import mainStyleSheet from '@/app/content-script/style.css?inline'
 
 const shadowWrapper = createElement('div', { 

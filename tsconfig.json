@@ -40,6 +40,8 @@
     }
   },
   "include": [
+    "src/constants/paths.ts",
+    "src/plugins/*.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
