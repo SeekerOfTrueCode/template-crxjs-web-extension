@@ -1,5 +1,5 @@
 import App from '@/app/background/app.vue'
-import { setupStore } from '@/logic/setup-store'
+import { setupStore } from '@/plugins/setup-store'
 
 export function createRenderlessAppAndStore() {
   const app = createApp(App)

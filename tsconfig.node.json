@@ -8,11 +8,16 @@
     "types": []
   },
   "include": [
-    "scripts/manifest.config.ts",
-    "scripts/resolve-path.ts",
-    "scripts/utils/define-extra-html-pages.ts",
+    ".storybook/preview.ts",
+    "src/constants/paths.ts",
+    "src/plugins/*.ts",
+    "scripts/**/*.ts",
+    "scripts/*.ts",
     "vite.config.ts",
     "vite.config.shared.ts",
-    "package.json"
+    "package.json",
+  ],
+  "exclude": [
+    "scripts/test-utils.ts"
   ]
 }

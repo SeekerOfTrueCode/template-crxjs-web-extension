@@ -1,11 +1,11 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './app.vue'
-import { setupRouter } from '@/logic/setup-router'
-import { setupStore } from '@/logic/setup-store'
-import { setupI18n } from '@/logic/setup-i18n'
-import { setupLoading } from '@/logic/setup-loading'
-import { delay } from '@/logic/utils/delay'
+import { setupRouter } from '@/plugins/setup-router'
+import { setupStore } from '@/plugins/setup-store'
+import { setupI18n } from '@/plugins/setup-i18n'
+import { setupLoading } from '@/plugins/setup-loading'
+import { delay } from '@/utils/delay'
 
 const app = createApp(App)
 setupRouter(app, 'popup')
