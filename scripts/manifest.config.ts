@@ -1,6 +1,6 @@
 import { defineManifest } from '@crxjs/vite-plugin'
 import packageJson from '../package.json'
-import { PATHS } from '../src/constants/paths'
+import { PATHS } from '../shared/constants/paths'
 import { MATCHES } from './constants/matches'
 import { MANIFEST_PERMISSIONS } from './constants/manifest-permissions'
 import { capitalize } from './utils/capitalize'

@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/vue3";
 import { setup } from '@storybook/vue3';
-import { setupStore } from '../src/plugins/setup-store'
-import { setupI18n } from '../src/plugins/setup-i18n'
+import { setupStore } from '@/plugins/setup-store'
+import { setupI18n } from '@/plugins/setup-i18n'
 import stringify from 'json-stringify-safe'
 
 setup((app) => {

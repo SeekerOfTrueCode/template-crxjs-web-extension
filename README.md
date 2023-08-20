@@ -9,7 +9,7 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 - [X] 📚 Testing with Vitest setup
 - [X] 📚 Prototyping and testing with Storybook setup
 - [X] 📚 Localization with Vue-I18n setup
-- [X] 📦 [Crxjs library basic setup (@crxjs/vite-plugin)](@crxjs/vite-plugin)
+- [X] 📦 [Crxjs library basic setup (@crxjs/vite-plugin)](https://crxjs.dev/vite-plugin/getting-started/vue/create-project)
 - [X] 📦 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [X] 📦 [State persistance plugin for Pinia configured for extension cross app synch (pinia-plugin-persistedstate-2)](https://github.com/iendeavor/pinia-plugin-persistedstate-2)
 - [X] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
@@ -20,8 +20,6 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## To Dos
 
-- [ ] ❗ Fix `offscreen.html` which doesn't render imported script `offscreen.ts` in dev
-- [ ] ❓ Maybe replace "vite-plugin-vue-pages" with [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
-- [ ] ❓ Maybe replace "pinia-plugin-persistedstate-2" (deprecated) with [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/migrating.html)
-- [ ] ❕ Prepare separate ts.config for storybook
-- [ ] ❕ Fix typings
+- [ ] ❗ Fix `offscreen.html` which doesn't render imported script `offscreen.ts` in dev. (problem related to the @crxjs/vite-plugin being beta version and still having some issues)
+- ❓ ~~Maybe replace "vite-plugin-vue-pages" with [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)~~ For now it doesn't seem to be very beneficial.
+- ❓ ~~Maybe replace "pinia-plugin-persistedstate-2" (deprecated) with [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/migrating.html)~~ It doesn't implement async storages.

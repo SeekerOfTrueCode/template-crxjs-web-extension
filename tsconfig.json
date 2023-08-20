@@ -40,16 +40,20 @@
     }
   },
   "include": [
-    "src/constants/paths.ts",
-    "src/plugins/*.ts",
+    ".storybook/preview.ts",
+
+    "shared/**/*.ts",
+
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/vite-env.d.ts",
+
+    "vite-env.d.ts",
     "components.d.ts",
     "auto-imports.d.ts"
   ],
+  "exclude": ["node_modules", "dist", "storybook-static", "scripts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
