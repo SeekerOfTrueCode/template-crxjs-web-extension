@@ -5,21 +5,20 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "@types/chrome",
-    ]
+    "types": []
   },
   "include": [
-    "src/vite-env.d.ts",
-    "components.d.ts",
-    "auto-imports.d.ts",
-
     ".storybook/preview.ts",
     "scripts/**/*.ts",
     "scripts/*.ts",
+
     "vite.config.ts",
     "vite.config.shared.ts",
-    "package.json"
+    "package.json",
+
+    "vite-env.d.ts",
+    "components.d.ts",
+    "auto-imports.d.ts",
   ],
   "exclude": [
     "scripts/test-utils.ts"
