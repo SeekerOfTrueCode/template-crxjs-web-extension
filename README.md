@@ -9,7 +9,7 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 - [X] 📚 Testing with Vitest setup
 - [X] 📚 Prototyping and testing with Storybook setup
 - [X] 📚 Localization with Vue-I18n setup
-- [X] 📦 [Crxjs library basic setup (@crxjs/vite-plugin)](@crxjs/vite-plugin)
+- [X] 📦 [Crxjs library basic setup (@crxjs/vite-plugin)](https://crxjs.dev/vite-plugin/getting-started/vue/create-project)
 - [X] 📦 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [X] 📦 [State persistance plugin for Pinia configured for extension cross app synch (pinia-plugin-persistedstate-2)](https://github.com/iendeavor/pinia-plugin-persistedstate-2)
 - [X] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)

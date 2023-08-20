@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { App, Ref } from 'vue'
 
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
