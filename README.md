@@ -20,6 +20,6 @@ Simple template made to simplify the work with crxjs library to quickly make / p
 
 ## To Dos
 
-- [ ] ❗ Fix `offscreen.html` which doesn't render imported script `offscreen.ts` in dev. (problem realted to the @crxjs/vite-plugin being beta version and still having some issues)
+- [ ] ❗ Fix `offscreen.html` which doesn't render imported script `offscreen.ts` in dev. (problem related to the @crxjs/vite-plugin being beta version and still having some issues)
 - ❓ ~~Maybe replace "vite-plugin-vue-pages" with [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)~~ For now it doesn't seem to be very beneficial.
 - ❓ ~~Maybe replace "pinia-plugin-persistedstate-2" (deprecated) with [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/migrating.html)~~ It doesn't implement async storages.
