@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import manifest from './scripts/manifest.config' // Node 14 & 16
 import { crx } from '@crxjs/vite-plugin'
 import { sharedConfig, plugins } from './vite.config.shared'
-import { PATHS } from './src/constants/paths'
+import { PATHS } from './shared/constants/paths'
 import { defineExtraHtmlPages } from './scripts/utils/define-extra-html-pages'
 import { resolvePath } from './scripts/resolve-path'
 

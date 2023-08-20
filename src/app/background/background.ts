@@ -1,5 +1,5 @@
 import { setupOffscreenDocument } from '@/utils/service-worker/setup-offscreen-document'
-import { PATHS } from '@/constants/paths'
+import { PATHS } from '@@/shared/constants/paths'
 import { createRenderlessAppAndStore } from '@/app/background/main'
 import { useCountStore } from '@/stores/count'
 

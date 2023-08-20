@@ -40,6 +40,10 @@
     }
   },
   "include": [
+    ".storybook/preview.ts",
+
+    "shared/**/*.ts",
+
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
@@ -49,6 +53,7 @@
     "components.d.ts",
     "auto-imports.d.ts"
   ],
+  "exclude": ["node_modules", "dist", "storybook-static", "scripts"],
   "references": [
     {
       "path": "./tsconfig.node.json"

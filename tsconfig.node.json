@@ -8,9 +8,10 @@
     "types": []
   },
   "include": [
-    ".storybook/preview.ts",
     "scripts/**/*.ts",
     "scripts/*.ts",
+
+    "shared/**/*.ts",
 
     "vite.config.ts",
     "vite.config.shared.ts",
